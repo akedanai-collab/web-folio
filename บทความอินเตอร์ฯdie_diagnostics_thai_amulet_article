@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Die Diagnostics — เหรียญพระเกจิคณาจารย์ไทย</title>
+<meta name="description" content="บทความเชิงวิชาการเกี่ยวกับการวิเคราะห์ร่องรอยแม่พิมพ์บนเหรียญพระเกจิคณาจารย์ไทย เมื่อไม่มีแม่พิมพ์ต้นแบบ">
+<style>
+:root{--bg:#f5f7fa;--card:#fff;--ink:#172033;--muted:#5e6a7d;--line:#dce2ea;--accent:#173b63;--gold:#a77921;--soft:#edf3f8}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Noto Sans Thai",sans-serif;line-height:1.75}
+header{background:linear-gradient(135deg,#10263e,#234b70);color:#fff;padding:70px 20px 55px}
+.wrap{max-width:1100px;margin:auto;padding:0 20px}.eyebrow{letter-spacing:.08em;text-transform:uppercase;font-size:.78rem;opacity:.75}
+h1{font-size:clamp(2rem,5vw,3.7rem);line-height:1.18;margin:12px 0 18px;max-width:950px} h2{font-size:1.75rem;margin-top:0} h3{margin-bottom:8px}
+.lead{font-size:1.12rem;max-width:900px;opacity:.94}.badge{display:inline-block;border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:3px 12px;margin-top:18px;font-size:.85rem}
+main{padding:35px 0 80px}.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:28px;margin:22px 0;box-shadow:0 8px 24px rgba(20,35,55,.05)}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.grid4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.note{border-left:5px solid var(--gold);background:#fbf7ed;padding:18px 20px;border-radius:10px}
+table{width:100%;border-collapse:collapse}th,td{text-align:left;padding:13px;border-bottom:1px solid var(--line);vertical-align:top}th{background:var(--soft)}
+.feature{cursor:pointer;transition:.18s}.feature:hover,.feature.active{transform:translateY(-2px);border-color:#9ab2c9;background:#f7fbff}
+.feature small{color:var(--muted)} .icon{font-size:2rem}.hidden{display:none}
+button{border:1px solid #bcc9d7;background:#fff;border-radius:10px;padding:10px 14px;cursor:pointer;color:var(--ink);font-weight:600}
+button.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+.stage{position:relative;min-height:310px;background:#0f1723;border-radius:18px;overflow:hidden;color:#fff}
+.coin{width:190px;height:190px;border-radius:50%;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:radial-gradient(circle at 35% 30%,#d8dce0,#8c9399 55%,#4f565c);border:7px solid #aeb5ba;box-shadow:inset 0 0 30px #30363c,0 12px 30px #0008}
+.mark{position:absolute;opacity:0;transition:.2s}.mark.show{opacity:1}
+.scratch{width:90px;height:3px;background:#fff;left:47%;top:40%;transform:rotate(-18deg)}.crack{width:80px;height:2px;background:#fff;left:48%;top:55%;transform:rotate(25deg);box-shadow:20px 8px 0 -0.5px #fff}.pit{width:12px;height:12px;border-radius:50%;border:2px solid #fff;left:57%;top:45%}.clash{width:55px;height:35px;border:2px dashed #fff;left:36%;top:48%;transform:rotate(-8deg)}
+.controls{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.flow{display:flex;flex-wrap:wrap;align-items:center;gap:8px}.step{background:var(--soft);border:1px solid var(--line);border-radius:12px;padding:12px 15px;font-weight:700}.arrow{color:var(--muted)}
+.result{padding:18px;border-radius:12px;background:#f7f9fb;border:1px dashed #bac6d3;min-height:90px}
+.layer{padding:18px;border:1px solid var(--line);border-radius:14px}.layer strong{display:block;font-size:1.1rem}
+footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-size:.9rem}
+@media(max-width:800px){.grid,.grid4{grid-template-columns:1fr}header{padding-top:45px}.card{padding:20px}}
+</style>
+</head>
+<body>
+<header>
+<div class="wrap">
+<div class="eyebrow">Die Diagnostics • Numismatic / Forensic Framework</div>
+<h1>การวิเคราะห์พิจารณาพระแท้เหรียญเกจิคณาจารย์ไทยฯ กับวิธีการทางพิพิธภัณฑ์สำนักกษาปณ์ใช้ทั่วโลก</h1>
+<p class="lead"><b>เมื่อไม่มีแม่พิมพ์ต้นแบบ เราจะพิสูจน์ได้อย่างไรว่าเหรียญมาจากแม่พิมพ์เดียวกัน?</b></p>
+<div class="badge">บทความเชิงวิชาการ + Interactive Infographic</div>
+</div>
+</header>
+
+<main class="wrap">
+
+<section class="card">
+<h2>บทคัดย่อ</h2>
+<p>การพิจารณาเหรียญพระเกจิคณาจารย์ไทยสามารถมองได้ทั้งในมิติของความแท้และความสัมพันธ์ของแม่พิมพ์ แต่สองคำถามนี้ไม่ใช่คำถามเดียวกัน บทความนี้เน้นประเด็นหลัง: หากไม่มีแม่พิมพ์ต้นแบบเหลืออยู่ เราจะศึกษาว่าเหรียญหลายเหรียญมีความสัมพันธ์กับแม่พิมพ์เดียวกันได้อย่างไร</p>
+<p>แนวทางหนึ่งคือการศึกษาร่องรอยที่เกิดจากสภาพของแม่พิมพ์และถูกถ่ายทอดลงบนเหรียญ เช่น <b>Die Polish Lines, Die Cracks, Die Pitting / Die Deterioration และ Die Clash Marks</b> แล้วเปรียบเทียบตำแหน่ง รูปร่าง ทิศทาง และความต่อเนื่องของร่องรอยหลายบริเวณ โดยใช้ภาพที่ควบคุมพิกัดและการซ้อนภาพเป็นเครื่องมือช่วยตรวจสอบ</p>
+<div class="note"><b>หลักการสำคัญ:</b> ผลการเปรียบเทียบควรใช้เพื่อ “สนับสนุนหรือไม่สนับสนุนสมมติฐานเรื่องความสัมพันธ์ของแม่พิมพ์” ไม่ใช่ประกาศความแท้หรือความเป็นแม่พิมพ์เดียวกันจากตำหนิเพียงจุดเดียว</div>
+</section>
+
+<section class="card">
+<h2>1. แยกสองคำถามออกจากกัน</h2>
+<div class="grid">
+<div class="layer"><strong>Authenticity Assessment</strong>ประเมินว่าเหรียญมีลักษณะสอดคล้องกับเหรียญแท้ กระบวนการผลิต เนื้อโลหะ สภาพ และข้อมูลประกอบอื่นหรือไม่</div>
+<div class="layer"><strong>Die Relationship Analysis</strong>ศึกษาว่าเหรียญสองเหรียญหรือหลายเหรียญมีร่องรอยที่สอดคล้องกับแม่พิมพ์เดียวกันหรือไม่</div>
+</div>
+<p>การพบความสัมพันธ์ของแม่พิมพ์เป็นหลักฐานชนิดหนึ่งของการศึกษาเหรียญ แต่ไม่ได้ตอบคำถามทั้งหมดเรื่องอายุ แหล่งที่มา provenance หรือความแท้ของวัตถุโดยอัตโนมัติ</p>
+</section>
+
+<section class="card">
+<h2>2. Interactive: ร่องรอยที่ควรค้นหา</h2>
+<p>กดเลือกแต่ละชนิดเพื่อดูสิ่งที่ควรตรวจสอบ</p>
+<div class="grid grid4">
+<div class="card feature" data-f="scratch"><div class="icon">〰</div><h3>Die Polish Lines</h3><small>เส้นจากการขัดแม่พิมพ์</small></div>
+<div class="card feature" data-f="crack"><div class="icon">⌁</div><h3>Die Cracks</h3><small>รอยแตกร้าวของแม่พิมพ์</small></div>
+<div class="card feature" data-f="pit"><div class="icon">•</div><h3>Die Pitting</h3><small>หลุม/การเสื่อมสภาพ</small></div>
+<div class="card feature" data-f="clash"><div class="icon">◫</div><h3>Die Clash</h3><small>ร่องรอยเหตุการณ์ระหว่างแม่พิมพ์</small></div>
+</div>
+<div class="stage">
+<div class="coin"></div>
+<div class="mark scratch" data-mark="scratch"></div><div class="mark crack" data-mark="crack"></div><div class="mark pit" data-mark="pit"></div><div class="mark clash" data-mark="clash"></div>
+</div>
+<div id="featureText" class="result" style="margin-top:14px">เลือกชนิดของร่องรอยเพื่อเริ่มดูรายละเอียด</div>
+</section>
+
+<section class="card">
+<h2>3. ศัพท์วงการพระกับกรอบ Numismatics</h2>
+<table>
+<thead><tr><th>คำที่พบในบริบทเหรียญไทย</th><th>กรอบศัพท์สากล</th><th>แนวทางพิจารณา</th></tr></thead>
+<tbody>
+<tr><td>เส้นสายฝน / เสี้ยนกระดาน</td><td>Die Polish Lines</td><td>แนวเส้น ความยาว ทิศทาง และพิกัด</td></tr>
+<tr><td>บล็อกแตก / เส้นรัศมี</td><td>Die Cracks / Hairline Flaws</td><td>ตำแหน่ง รูปทรง และการเปลี่ยนแปลงของรอย</td></tr>
+<tr><td>จุดไข่ปลา / เนื้อขี้กลาก</td><td>Die Pitting / Deterioration</td><td>พิกัด รูปร่าง และกลุ่มของจุด</td></tr>
+<tr><td>บล็อกเขยื้อน / บล็อกซ้อน</td><td>Die Clash / Machine Doubling</td><td>ต้องพิจารณากลไกของรอยก่อนจัดประเภท</td></tr>
+</tbody></table>
+</section>
+
+<section class="card">
+<h2>4. เมื่อไม่มีแม่พิมพ์ต้นแบบ</h2>
+<p>ให้เปลี่ยนวัตถุอ้างอิงจาก “แม่พิมพ์ → เหรียญ” เป็น “เหรียญ → เหรียญ → เหรียญ” โดยใช้เหรียญที่ยังหลงเหลือเป็นหลักฐานทางอ้อมของสภาพแม่พิมพ์</p>
+<div class="flow">
+<div class="step">เหรียญ A</div><div class="arrow">↔</div><div class="step">เหรียญ B</div><div class="arrow">↔</div><div class="step">เหรียญ C</div>
+</div>
+<p>จุดแข็งอยู่ที่การตรวจสอบ <b>หลายตำแหน่ง</b> และหลายประเภทของ Micro-Features ไม่ใช่การตัดสินจาก “ตำหนิเด็ด” เพียงหนึ่งจุด</p>
+</section>
+
+<section class="card">
+<h2>5. Interactive: “เกิดจากแม่พิมพ์” หรือ “เกิดภายหลัง”?</h2>
+<div class="controls">
+<button class="classBtn active" data-type="die">ร่องรอยจากแม่พิมพ์</button>
+<button class="classBtn" data-type="post">ร่องรอยภายหลัง</button>
+<button class="classBtn" data-type="general">ลักษณะทั่วไป</button>
+</div>
+<div id="classResult" class="result"></div>
+</section>
+
+<section class="card">
+<h2>6. วิธีคิดแบบ A / B / C</h2>
+<p>สมมติว่ามีเหรียญสามตัวอย่าง การตรวจสอบควรดูว่าร่องรอยเฉพาะตำแหน่งยังคงสอดคล้องกันหรือไม่</p>
+<div class="grid">
+<div class="layer"><strong>บริเวณ A</strong>พบเส้นหรือจุดที่มีตำแหน่งและรูปแบบสอดคล้องกัน</div>
+<div class="layer"><strong>บริเวณ B</strong>พบร่องรอยอีกชุดที่สอดคล้องกันโดยไม่อาศัยจุดเดียวกับบริเวณ A</div>
+<div class="layer"><strong>บริเวณ C</strong>ตรวจสอบรอยแตกหรือรายละเอียดเฉพาะอื่น</div>
+<div class="layer"><strong>ภาพรวม</strong>หลักฐานหลายบริเวณสนับสนุนสมมติฐานเดียวกันหรือไม่?</div>
+</div>
+<div class="note" style="margin-top:18px"><b>ไม่ใช่:</b> “เหมือนกันหนึ่งจุด = แม่พิมพ์เดียวกัน”<br><b>แต่เป็น:</b> “หลักฐานเฉพาะหลายตำแหน่งสอดคล้องกัน = เพิ่มน้ำหนักให้สมมติฐาน Same-Die”</div>
+</section>
+
+<section class="card">
+<h2>7. Workflow ที่ตรวจสอบซ้ำได้</h2>
+<div class="flow">
+<div class="step">ควบคุมคุณภาพภาพ</div><span class="arrow">→</span>
+<div class="step">จัดแนวภาพ</div><span class="arrow">→</span>
+<div class="step">ค้นหา Local Features</div><span class="arrow">→</span>
+<div class="step">Overlay / Matching</div><span class="arrow">→</span>
+<div class="step">Evidence Fusion</div><span class="arrow">→</span>
+<div class="step">รายงาน + ข้อจำกัด</div>
+</div>
+</section>
+
+<section class="card">
+<h2>8. Evidence Fusion: อย่าพึ่งหลักฐานชนิดเดียว</h2>
+<div class="grid">
+<div class="layer"><strong>Die Diagnostics</strong>Polish Lines, Cracks, Pitting, Clash และลักษณะเฉพาะอื่น</div>
+<div class="layer"><strong>Geometry</strong>ตำแหน่งและรูปร่างของรายละเอียดที่สัมพันธ์กับพิกัดเดียวกัน</div>
+<div class="layer"><strong>Surface / Physical</strong>ข้อมูลพื้นผิว ขนาด น้ำหนัก ความหนาแน่น หรือการทดสอบทางกายภาพเมื่อเหมาะสม</div>
+<div class="layer"><strong>Independent Validation</strong>ชุดข้อมูลที่มี Ground Truth และการทดสอบที่แยกจากข้อมูลที่ใช้พัฒนา</div>
+</div>
+<p style="margin-top:16px">กรอบ Triangulated Reliability ช่วยให้มองความน่าเชื่อถือเป็นการบรรจบกันของหลักฐานหลายชั้น ไม่ใช่ตัวเลขจากเครื่องมือเพียงตัวเดียว</p>
+</section>
+
+<section class="card">
+<h2>9. DieForensics V17: จากหลักการสู่เครื่องมือ</h2>
+<p>DieForensics V17 เป็นต้นแบบที่นำแนวคิดข้างต้นมาเป็น workflow ได้แก่ <b>IMAGE QUALITY → REGISTRATION SEARCH → ROBUST MATCHING → EVIDENCE FUSION → ENGINEERING / REPORT</b> และมีโมดูลสำหรับ Polishing Scratches, Pitting, Die Cracks, Die Clash, Geometry และ Surface Texture</p>
+<div class="note"><b>สถานะของเครื่องมือ:</b> เป็น offline single-file prototype; automated registration, matching และ confidence เป็น heuristic และต้องผ่าน external validation ก่อนใช้ในงาน forensic หรือ commercial จริง ดังนั้นระบบนี้ควรทำหน้าที่เป็น “เครื่องมือช่วยตรวจสอบหลักฐาน” ไม่ใช่เครื่องรับรองพระแท้</div>
+</section>
+
+<section class="card">
+<h2>10. ข้อจำกัด</h2>
+<ul>
+<li>ภาพที่เบลอ แสงไม่สม่ำเสมอ หรือกำลังขยายไม่เพียงพออาจทำให้ร่องรอยผิดเพี้ยน</li>
+<li>Rotation, scale และ perspective ต้องได้รับการควบคุมหรือแก้ไขก่อนเปรียบเทียบ</li>
+<li>ร่องรอยบนเหรียญอาจสึกหายหรือเปลี่ยนจากการใช้งาน การขัด หรือการกัดกร่อน</li>
+<li>รอยกระแทกและรอยขูดภายหลังการผลิตต้องแยกจากร่องรอยที่เกิดจากแม่พิมพ์</li>
+<li>ไม่ควรนำค่าความมั่นใจจาก prototype ไปตีความเป็นความน่าจะเป็นทางนิติวิทยาศาสตร์โดยไม่มี validation</li>
+</ul>
+</section>
+
+<section class="card">
+<h2>11. ข้อสรุป</h2>
+<p>การไม่มีแม่พิมพ์ต้นแบบไม่ได้หมายความว่าไม่สามารถศึกษาความสัมพันธ์ของแม่พิมพ์ได้ แต่ต้องเปลี่ยนวิธีคิดจากการนำเหรียญไปเทียบกับแม่พิมพ์ มาเป็นการใช้ร่องรอยที่ถูกถ่ายทอดจากแม่พิมพ์บนเหรียญหลายเหรียญเป็นหลักฐานทางอ้อม</p>
+<p>Die Polish Lines, Die Cracks, Die Pitting และ Die Clash Marks จึงมีคุณค่าเมื่อสามารถระบุตำแหน่งและตรวจสอบซ้ำได้ โดยเฉพาะเมื่อพบลักษณะสอดคล้องกันหลายบริเวณและมีหลักฐานชนิดอื่นสนับสนุน</p>
+<div class="note"><b>ข้อสรุปทางวิธีวิทยา:</b> ควรใช้ถ้อยคำว่า “หลักฐานสนับสนุนสมมติฐานว่าเหรียญมีความสัมพันธ์กับแม่พิมพ์เดียวกัน” มากกว่าการประกาศ “พิสูจน์ 100%” จากภาพหรือระบบอัตโนมัติเพียงอย่างเดียว</div>
+</section>
+
+<section class="card">
+<h2>แหล่งข้อมูลที่ใช้เป็นฐาน</h2>
+<ol>
+<li><b>วิธีปฏิบัติพิพิธภัณฑ์/สำนักกษาปณ์ทั่วโลกใช้วิเคราะห์เหรียญ</b> — แนวคิดเกี่ยวกับ Die Polish Lines, Die Pitting, Die Cracks, Die Clash และการถ่ายภาพ/ซ้อนภาพ</li>
+<li><b>thai_amulet_numismatic_forensics.html</b> — การเชื่อมศัพท์การพิจารณาเหรียญไทยกับกรอบ Numismatics และแนวคิด Image Overlay</li>
+<li><b>reliability_assessment_spa.html</b> — แนวคิด Triangulated Reliability, Evidence Fusion และ Validation; ไม่ใช้ตัวเลข prototype เป็นผลวิจัยที่ผ่านการรับรอง</li>
+<li><b>E21QGE V17 / DieForensics V17</b> — ต้นแบบ workflow สำหรับ registration, robust matching, evidence fusion และ validation workspace</li>
+</ol>
+</section>
+
+</main>
+<footer><div class="wrap">Die Diagnostics Article • Academic / Educational Prototype • ข้อสรุปเป็นการประเมินเชิงหลักฐาน ไม่ใช่ใบรับรองความแท้</div></footer>
+
+<script>
+const descriptions={
+scratch:"Die Polish Lines: ตรวจแนวเส้น ความยาว ทิศทาง จุดเริ่มต้น/สิ้นสุด และความสัมพันธ์กับรายละเอียดโดยรอบ",
+crack:"Die Cracks: ตรวจตำแหน่ง ทิศทาง รูปทรง และการเปลี่ยนแปลงของรอยแตกตาม Die State",
+pit:"Die Pitting / Deterioration: ตรวจพิกัด รูปร่าง ขนาด และกลุ่มของจุดผิดปกติ ไม่ใช่ดูเพียงจำนวนจุด",
+clash:"Die Clash Marks: ตรวจลักษณะและตำแหน่งของรอยที่เกิดจากเหตุการณ์ระหว่างแม่พิมพ์ โดยต้องพิจารณากลไกก่อนจัดประเภท"
+};
+document.querySelectorAll(".feature").forEach(el=>el.onclick=()=>{
+document.querySelectorAll(".feature").forEach(x=>x.classList.remove("active"));
+el.classList.add("active");
+let f=el.dataset.f;
+document.querySelectorAll(".mark").forEach(x=>x.classList.toggle("show",x.dataset.mark===f));
+document.getElementById("featureText").textContent=descriptions[f];
+});
+const classText={
+die:"ตัวอย่างที่ควรตรวจในกลุ่มนี้คือ Die Polish Lines, Die Cracks, Die Pitting และ Die Clash โดยต้องดูพิกัดและรูปแบบเฉพาะร่วมกัน",
+post:"รอยกระแทก รอยขูด การกัดกร่อน หรือการซ่อมอาจเกิดหลังการผลิต จึงไม่ควรนับเป็น Die Feature โดยอัตโนมัติ",
+general:"รายละเอียดของแบบเหรียญหรือรูปทรงที่พบทั่วไปอาจแสดงเพียงว่าเป็นเหรียญชนิดเดียวกัน ยังไม่เพียงพอสำหรับข้อสรุปเรื่องแม่พิมพ์เดียวกัน"
+};
+function setClass(t){
+document.querySelectorAll(".classBtn").forEach(b=>b.classList.toggle("active",b.dataset.type===t));
+document.getElementById("classResult").textContent=classText[t];
+}
+document.querySelectorAll(".classBtn").forEach(b=>b.onclick=()=>setClass(b.dataset.type));
+setClass("die");
+</script>
+</body>
+</html>
